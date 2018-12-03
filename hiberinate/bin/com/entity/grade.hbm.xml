@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.entity">
+	<class name="Grade" table="grade">
+		<id name="id" >
+			<column name="id" ></column>
+			<generator class="identity"></generator>
+		</id>
+		<property name="score" column="score"></property>
+		<many-to-one name="stus" column="stuId" class="Stu" cascade="all"/>
+		<many-to-one name="courses" column="courseId" class="Course" cascade="all"/>
+	</class>
+</hibernate-mapping>

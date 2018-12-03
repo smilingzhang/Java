@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.entity">
+	<class name="Power" table="power">
+		<id name="id" >
+			<column name="id" ></column>
+			<generator class="identity"></generator>
+		</id>
+		<property name="powerName" column="powerName"></property>
+		<set name="roles" table="distribute" inverse="true">
+			<key column="powerId"/>
+			<many-to-many class="Role" column="roleId"/>
+		</set>
+	</class>
+</hibernate-mapping>

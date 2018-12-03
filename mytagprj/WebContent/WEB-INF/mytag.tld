@@ -1,0 +1,35 @@
+<taglib>
+	<uri>http://localhost:8080/mytagprj/mytag</uri>  <!-- 标签里边内容自己写，写什么都行 -->
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<tag>
+		<name>hello</name>   <!-- 给标签起名字 -->
+		<tag-class>com.MyTag</tag-class>   <!--给出类的路径  -->
+		<body-content>empty</body-content>   <!-- 是否有标签体 -->
+		<description>
+			Send a math expression to the JSP
+		</description>
+	</tag>
+	
+	<tag>
+		<name>if</name>   <!-- 给标签起名字 -->
+		<tag-class>com.IfTag</tag-class>   <!--给出类的路径  -->
+		<body-content>JSP</body-content>   <!-- 是否有标签体 -->
+		<attribute>
+			<name>show</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>loop</name>   <!-- 给标签起名字 -->
+		<tag-class>com.LoopTag</tag-class>   <!--给出类的路径  -->
+		<body-content>JSP</body-content>   <!-- 是否有标签体 -->
+		<attribute>
+			<name>count</name>
+			<required>true</required>
+			<requestprvalue>true</requestprvalue>
+		</attribute>
+	</tag>
+</taglib>

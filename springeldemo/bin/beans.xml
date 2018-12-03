@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		
+		<!-- xml配置 #{id名字.属性名} -->
+	<!--  bean id="memory" class="com.xml.Memory">
+		<property name="memoryNum" value="100"></property>
+	</bean>
+	<bean id="computer" class="com.xml.Computer">
+		<property name="memoryNum" value="#{memory.memoryNum}"></property>
+		<property name="memory" ref="memory"></property>
+		<property name="a" value="#{3*3}"></property>
+	</bean-->
+	
+	 <!-- 注解配置 -->
+	  <context:annotation-config />
+	<context:component-scan base-package="com.collection">
+	</context:component-scan>
+	
+</beans>

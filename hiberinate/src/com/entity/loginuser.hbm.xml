@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.entity">
+	<class name="LoginUser" table="loginUser">
+		<id name="loginName">
+			<column name="loginName"></column>
+			<generator class="assigned"></generator>
+		</id>
+		<property name="passWord" column="passWord"></property>
+		<property name="mail" column="mail"></property>
+		<one-to-one name="userInfo" class="UserInfo" cascade="all"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.entity">
+	<class name="Cake" table="product">
+		<id name="id" type="int">
+			<column name="id" sql-type="int"></column>
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="name"></property>
+		<property name="price">
+		<column name="price"></column>
+		</property>
+		<property name="size" column="size"></property>
+		 <many-to-one name="cakeType" column="type" class="CakeType"/>
+	</class>
+</hibernate-mapping>

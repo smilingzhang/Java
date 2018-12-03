@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.entity">
+	<class name="Student" table="student">
+		<id name="stuId" type="int">
+			<column name="stuId" sql-type="int"></column>
+			<generator class="identity"></generator>
+		</id>
+		<property name="stuName" column="stuName"></property>
+		<property name="age">
+		<column name="age"></column>
+		</property>
+		<many-to-one name="classes" column="classid" class="Classes" />
+	</class>
+</hibernate-mapping>

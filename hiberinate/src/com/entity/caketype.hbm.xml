@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.entity">
+	<class name="CakeType" table="caketype">
+		<id name="id">
+			<column name="id"></column>
+			<generator class="identity">
+				<param name="property">loginUser</param>
+			</generator>
+		</id>
+		<property name="name" column="name"></property>
+		<set name="cakes" cascade="all">
+        	<key column="parentId"></key>
+        	<one-to-many class="CakeType"/>
+        </set>
+        <many-to-one name="parentType" column="parentId" class="CakeType"></many-to-one>
+	</class>
+</hibernate-mapping>

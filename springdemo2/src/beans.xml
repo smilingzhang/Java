@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		<!-- 构造方法实例化 -->
+		<bean id="bean1" class="bean1.Bean1"></bean>
+		<!-- 静态工厂实例化 -->
+		<bean id="bean2factory" class="bean2.Bean2Factory" factory-method="init"></bean>
+		<!-- 实例工厂实例化,实体类配置不能写class属性 -->
+		<bean id="bean3factory" class="bean3.Bean3Factory"></bean>
+		<bean id="bean3" factory-bean="bean3factory" factory-method="init"></bean>
+</beans>

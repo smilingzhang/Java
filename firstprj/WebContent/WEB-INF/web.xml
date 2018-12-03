@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>firstprj</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!--这是针对所有的servlet的初始参数  -->
+  <context-param>
+  	<param-name>count</param-name>
+  	<param-value>1</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.bigdata.taobao.servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/hi</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.bigdata.taobao.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ReServlet</servlet-name>
+    <servlet-class>com.bigdata.taobao.servlet.ReServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReServlet</servlet-name>
+    <url-pattern>/ReServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PerCenterServlet</servlet-name>
+    <servlet-class>com.bigdata.taobao.servlet.PerCenterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PerCenterServlet</servlet-name>
+    <url-pattern>/PerCenterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ContServlet</servlet-name>
+    <servlet-class>com.bigdata.taobao.servlet.ContServlet</servlet-class>
+    <init-param>
+    	<param-name>num</param-name>
+    	<param-value>first</param-value>
+    </init-param>
+</servlet>
+  <servlet-mapping>
+    <servlet-name>ContServlet</servlet-name>
+    <url-pattern>/ContServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

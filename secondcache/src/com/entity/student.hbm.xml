@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.entity">
+	<class name="Student" table="student">
+		<cache usage="read-only"></cache>
+		<id name="id" >
+			<column name="stuId" ></column>
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="stuName"></property>
+		<property name="age" column="age"></property>
+	</class>
+</hibernate-mapping>
